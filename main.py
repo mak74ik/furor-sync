@@ -7,11 +7,6 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.backends import default_backend
-from libp2p import peer_id
-from libp2p import networking
-from libp2p import connection
-from nacl import secret
-from nacl import encoding
 
 def generate_key(password):
     kdf = PBKDF2HMAC(
