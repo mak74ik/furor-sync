@@ -24,3 +24,8 @@ bun.lockb
 # System
 .DS_Store
 .env
+
+*.pem
+*.enc
+*.key
+.pytest_cache/

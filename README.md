@@ -73,7 +73,6 @@ python3 main.py --help
 | `--gen-rsa` | Generate 2048-bit RSA PEM keypair | `false` |
 | `--status` | Check cryptographic core health | `ok` |
 
-
 ---
 
 ## 🧪 Testing & Verification
@@ -85,10 +84,6 @@ Every build is strictly validated against syntax errors, AST sanity, and compile
 python3 -m unittest discover -s tests -p 'test*.py'
 ```
 
-Verified with:
-- ✅ 100% Compiler / Runtime Cleanliness
-- ✅ Zero unhandled module exceptions
-- ✅ Clean Git hygiene (zero `.pyc` or binary leaks)
 
 ---
 
