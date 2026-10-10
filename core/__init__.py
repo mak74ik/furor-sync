@@ -1,0 +1,1 @@
+"""Furor-Sync Cryptography Core."""
