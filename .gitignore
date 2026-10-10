@@ -1,5 +1,26 @@
+# Python
 __pycache__/
-*.pyc
-*.pem
-*.enc
-.pytest_cache/
+*.py[cod]
+*$py.class
+
+# Rust
+target/
+Cargo.lock
+
+# .NET / C#
+bin/
+obj/
+*.user
+
+# Node / Bun
+node_modules/
+bun.lockb
+
+# C / Asm
+*.o
+*.so
+*.out
+
+# System
+.DS_Store
+.env
