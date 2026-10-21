@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Furor-Sync - Local-First P2P Encrypted Vault
-Part of Auto Qwen AI Toolchain.
+Part of Yoshi Toolchain.
 """
 
 import sys

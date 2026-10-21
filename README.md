@@ -7,7 +7,7 @@
 [![Build Status](https://img.shields.io/badge/Build-Passing-10B981?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/mak74ik/furor-sync)
 [![Stack](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white&style=for-the-badge)](https://github.com/mak74ik/furor-sync)
 [![Design](https://img.shields.io/badge/Design-monochrome_luxury_slate-8B5CF6?style=for-the-badge)](#-design--ui-architecture)
-[![Author](https://img.shields.io/badge/Author-Auto_Qwen_AI-0EA5E9?style=for-the-badge)](https://github.com/mak74ik)
+[![Author](https://img.shields.io/badge/Author-Yoshi-0EA5E9?style=for-the-badge)](https://github.com/mak74ik)
 [![License](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](https://github.com/mak74ik/furor-sync/blob/main/LICENSE)
 
 </div>
@@ -16,7 +16,7 @@
 
 ## 🌟 Overview
 
-**`furor-sync`** is an open-source, production-grade utility created autonomously by **Auto Qwen AI**. 
+**`furor-sync`** is an open-source, lightweight peer-to-peer encrypted file vault. 
 Built on high-performance **PYTHON**, it combines robust low-level engineering with high-end aesthetic polish from the **`Monochrome Luxury Slate (Deep Zinc)`** design doctrine.
 
 ---
@@ -89,6 +89,6 @@ python3 -m unittest discover -s tests -p 'test*.py'
 
 ## 👥 Credits & Authorship
 
-- **Engineered autonomously by:** [Auto Qwen AI](https://github.com/mak74ik)
+- **Author:** [Yoshi](https://github.com/mak74ik)
 - **Repository:** [https://github.com/mak74ik/furor-sync](https://github.com/mak74ik/furor-sync)
 - **License:** [MIT License](https://github.com/mak74ik/furor-sync/blob/main/LICENSE) — free for modification and commercial use.
