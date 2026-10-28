@@ -1,94 +1,65 @@
-<div align="center">
+# furor-sync
 
-# Furor Sync — Local-First P2P Encrypted Vault
+A local-first encrypted file vault and cryptographic key manager using Fernet (AES-128-CBC with HMAC-SHA256 authentication), PBKDF2-HMAC-SHA256 key derivation, and RSA-2048 asymmetric key generation.
 
-> **Lightweight local-first P2P encrypted file synchronizer with RSA/PBKDF2 key management and zero cloud dependence.**
-
-[![Build Status](https://img.shields.io/badge/Build-Passing-10B981?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/mak74ik/furor-sync)
-[![Stack](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white&style=for-the-badge)](https://github.com/mak74ik/furor-sync)
-[![Design](https://img.shields.io/badge/Design-monochrome_luxury_slate-8B5CF6?style=for-the-badge)](#-design--ui-architecture)
-[![Author](https://img.shields.io/badge/Author-Yoshi-0EA5E9?style=for-the-badge)](https://github.com/mak74ik)
-[![License](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](https://github.com/mak74ik/furor-sync/blob/main/LICENSE)
-
-</div>
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python: 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Cryptography: Fernet / RSA](https://img.shields.io/badge/crypto-Fernet%20%7C%20RSA--2048-green.svg)](#)
 
 ---
 
-## 🌟 Overview
+## Features
 
-**`furor-sync`** is an open-source, lightweight peer-to-peer encrypted file vault. 
-Built on high-performance **PYTHON**, it combines robust low-level engineering with high-end aesthetic polish from the **`Monochrome Luxury Slate (Deep Zinc)`** design doctrine.
-
----
-
-## ✨ Key Features
-
-- **Local-First P2P Mesh Architecture**: Direct node-to-node data replication without intermediary telemetry servers.
-- **Military-Grade Cryptography**: AES-256 / Fernet key derivation backed by PBKDF2HMAC (SHA-256 with 100,000 rounds) and RSA 2048-bit asymmetric keypairs.
-- **Strict Memory & Process Hygiene**: Zero leaked bytecode, verified AST structure, and 100% automated test coverage.
-- **Minimalist Zero-Fat CLI**: Self-contained single-command deployment with zero bloated third-party framework overhead.
+- **Fernet Payload Encryption**: Symmetrical encryption using 128-bit AES in CBC mode with PKCS7 padding and HMAC-SHA256 for integrity verification.
+- **PBKDF2 Key Derivation**: Derives strong 32-byte encryption keys from user passwords with 100,000 SHA-256 iterations.
+- **RSA-2048 Keypair Generation**: Generates standard PKCS#8 private and SubjectPublicKeyInfo public keys in PEM format for asymmetric key agreement.
+- **Zero Cloud Footprint**: Operates entirely offline on the local filesystem.
 
 ---
 
-## 🎨 Design & UI Architecture
+## Quickstart
 
-This project implements the **[Monochrome Luxury Slate (Deep Zinc)](#-design--ui-architecture)** design system:
-- **Category:** `Liquid Glass & Haute Couture Optics`
-- **Design Tokens & Palette:** `background: #08080A` • `surface_1: #121318` • `surface_2: #1A1B22` • `border_hairline: rgba(255, 255, 255, 0.08)`
-- **Physical Optics & Interaction:** Specular rim highlights, sub-pixel borders, tabular numerals, and zero AI-slop color gradients.
-
-```mermaid
-flowchart LR
-    A["👤 User / CLI Input"] --> B["⚙️ Core Engine (PYTHON)"]
-    B --> C["🎨 Monochrome Luxury Slate (Deep Zinc) Interface"]
-    B --> D["📦 Local Storage / Engine"]
-    C --> E["🖥️ Verified Output (100% Pass)"]
-```
-
----
-
-## 🚀 Quick Start & Installation
-
-### Prerequisites
-Make sure you have `python` installed on your system.
-
-### Running the Project
+### 1. Requirements
 ```bash
-# Install optional dependencies
-pip install -r requirements.txt
-
-# Run CLI
-python3 main.py --help
+pip install cryptography
 ```
 
----
-
-## 💻 CLI & Parameter Reference
-
-| Flag / Command | Description | Default |
-| :--- | :--- | :--- |
-| `-p, --password <pwd>` | Password for PBKDF2 key derivation & RSA pair generation | `-` |
-| `-e, --encrypt` | Encrypt symmetrical secret key into key.enc using master password | `false` |
-| `-d, --decrypt` | Decrypt encrypted key.enc to stdout/memory | `false` |
-| `--gen-rsa` | Generate 2048-bit RSA PEM keypair | `false` |
-| `--status` | Check cryptographic core health | `ok` |
-
----
-
-## 🧪 Testing & Verification
-
-Every build is strictly validated against syntax errors, AST sanity, and compiler passes before release:
-
+### 2. Check Engine Health
 ```bash
-# Run automated test suite
-python3 -m unittest discover -s tests -p 'test*.py'
+python3 main.py --status
 ```
 
+### 3. Encrypt a Symmetric Secret
+```bash
+python3 main.py -e -p "your-master-passphrase"
+```
+Output:
+```text
+🔒 Secret key encrypted successfully -> saved to key.enc
+```
+
+### 4. Decrypt the Secret
+```bash
+python3 main.py -d -p "your-master-passphrase"
+```
+
+### 5. Generate RSA-2048 Keypair
+```bash
+python3 main.py --gen-rsa
+```
+Creates `private_key.pem` and `public_key.pem`.
 
 ---
 
-## 👥 Credits & Authorship
+## Testing
 
-- **Author:** [Yoshi](https://github.com/mak74ik)
-- **Repository:** [https://github.com/mak74ik/furor-sync](https://github.com/mak74ik/furor-sync)
-- **License:** [MIT License](https://github.com/mak74ik/furor-sync/blob/main/LICENSE) — free for modification and commercial use.
+Run unit tests:
+```bash
+python3 -m unittest discover -s tests
+```
+
+---
+
+## License
+
+[MIT License](LICENSE)

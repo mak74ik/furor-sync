@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Furor-Sync - Local-First P2P Encrypted Vault
-Part of Yoshi Toolchain.
+furor-sync: Local-first encrypted vault and key management tool.
 """
 
 import sys
